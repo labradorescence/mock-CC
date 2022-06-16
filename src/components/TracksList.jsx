@@ -1,28 +1,37 @@
-import React from 'react'
+import React from 'react';
+import Track from './Track';
 
-function TracksList() {
+function TracksList({ filteredData }) {
   return (
     <table>
       <tbody>
         <tr>
           <th>
-          <h3 className="row-image">Img</h3>
-
+            <h3 className='row-image'>Img</h3>
           </th>
           <th>
-            <h3 className="row-title">Title</h3>
+            <h3 className='row-title'>Title</h3>
           </th>
           <th>
-            <h3 className="">Artist</h3>
+            <h3 className=''>Artist</h3>
           </th>
           <th>
-            <h3 className="">BPM</h3>
+            <h3 className=''>BPM</h3>
           </th>
         </tr>
-        {/* render a list of <Track> components here */}
+        {filteredData.map((track) => (
+          <Track
+            key={track.name}
+            id={track.id}
+            title={track.title}
+            artist={track.artist}
+            BPM={track.BPM}
+            image={track.image}
+          />
+        ))}
       </tbody>
     </table>
-  )
+  );
 }
 
-export default TracksList
+export default TracksList;
