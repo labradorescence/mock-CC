@@ -1,6 +1,12 @@
 import React from 'react'
+import Track from './Track'
 
-function TracksList() {
+function TracksList({ songTracks, searchMusic }) {
+
+  const filteredMusic = songTracks.filter((music) => {
+    return music.title.toLowerCase().includes(searchMusic.toLowerCase())
+  } )
+  
   return (
     <table>
       <tbody>
@@ -19,7 +25,9 @@ function TracksList() {
             <h3 className="">BPM</h3>
           </th>
         </tr>
-        {/* render a list of <Track> components here */}
+        {filteredMusic.map(song => {
+          return <Track song={song} key={song.id}/>
+        })}
       </tbody>
     </table>
   )
