@@ -37,8 +37,10 @@ The base URL for your backend is: `http://localhost:8001`
 
 As a user, I should be able to:
 
-- See a table of all the tracks currently in your library.
+- See a table of all the tracks currently in your library. --> -->
+
 - Fill out and submit the form to add a new track. This should add the new track to the table **as well as post the new track to the backend API for persistence**.
+
 - Filter tracks by typing into the search bar. Only tracks that have any field that matches the search term should be shown in the table. Filtering happens 'live' as the search term is typed into the search bar.
 
 ### Endpoints for Core Deliverables
@@ -55,14 +57,14 @@ Example Response:
     "artist": "Lonely Boy",
     "BPM": 122,
     "image": "https://cdn5.beatstars.com/eyJidWNrZXQiOiJidHMtY29udGVudCIsImtleSI6InVzZXJzL3Byb2QvMTUxMzAyMi9pbWFnZS9rODlZRzAxclh0VXkvY2djZmd4ZmcuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImZpbGwiLCJ3aWR0aCI6MjQwLCJoZWlnaHQiOjI0MH19fQ==?t=1638295080242"
-},
-{
+  },
+  {
     "id": 2,
     "title": "Move Different",
     "artist": "Buddha Vybez",
     "BPM": 129,
     "image": "https://cdn5.beatstars.com/eyJidWNrZXQiOiJidHMtY29udGVudCIsImtleSI6InVzZXJzL3Byb2QvNDkxNTQ2L2ltYWdlL0NMeFd0R09QaEM0Ty9tb3ZlZGlmZmVyZW50LmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJmaWxsIiwid2lkdGgiOjI0MCwiaGVpZ2h0IjoyNDB9fX0=?t=1639408815480"
-}
+  }
 ]
 ```
 
@@ -91,11 +93,11 @@ Example Response:
 
 ```json
 {
-    "id": 5,
-    "title": "Yichang",
-    "artist": "beefy",
-    "BPM": 107,
-    "image": "https://cdn5.beatstars.com/eyJidWNrZXQiOiJidHMtY29udGVudCIsImtleSI6InVzZXJzL3Byb2QvODI0NDExL2ltYWdlL0EzRkRJQjlHQkJTRC8yMDIyMDEyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiZmlsbCIsIndpZHRoIjoyNDAsImhlaWdodCI6MjQwfX19?t=1643380284285"
+  "id": 5,
+  "title": "Yichang",
+  "artist": "beefy",
+  "BPM": 107,
+  "image": "https://cdn5.beatstars.com/eyJidWNrZXQiOiJidHMtY29udGVudCIsImtleSI6InVzZXJzL3Byb2QvODI0NDExL2ltYWdlL0EzRkRJQjlHQkJTRC8yMDIyMDEyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0IjoiZmlsbCIsIndpZHRoIjoyNDAsImhlaWdodCI6MjQwfX19?t=1643380284285"
 }
 ```
 
