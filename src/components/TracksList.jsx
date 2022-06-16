@@ -1,7 +1,7 @@
 import React from 'react';
 import Track from './Track';
 
-function TracksList({ filteredData }) {
+function TracksList({ filteredData, setDeleteTrack }) {
   return (
     <table>
       <tbody>
@@ -27,6 +27,7 @@ function TracksList({ filteredData }) {
             artist={track.artist}
             BPM={track.BPM}
             image={track.image}
+            setDeleteTrack={setDeleteTrack}
           />
         ))}
       </tbody>

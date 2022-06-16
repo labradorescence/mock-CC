@@ -3,7 +3,7 @@ import Search from './Search';
 import AddTrackForm from './AddTrackForm';
 import TracksList from './TracksList';
 
-function TracksPage({ deepCuts, setAddTrack }) {
+function TracksPage({ deepCuts, setAddTrack, setDeleteTrack }) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredData = deepCuts.filter((track) => {
@@ -13,7 +13,7 @@ function TracksPage({ deepCuts, setAddTrack }) {
     <div>
       <Search setSearchQuery={setSearchQuery} />
       <AddTrackForm setAddTrack={setAddTrack} />
-      <TracksList filteredData={filteredData} />
+      <TracksList filteredData={filteredData} setDeleteTrack={setDeleteTrack} />
     </div>
   );
 }
