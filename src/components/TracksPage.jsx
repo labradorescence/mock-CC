@@ -21,12 +21,17 @@ function TracksPage() {
   function  handleMusicSearch(value) {
     setSearchMusic(value)
   }
-   
+  
+  function deleteTrack(id) {
+    const deletedTrack = songTracks.filter(song => song.id !== id)
+    setSongTracks(deletedTrack)
+  }
+
   return (
     <div>
       <Search onHandleMusicSearch={handleMusicSearch} />
       <AddTrackForm onFormInput={formInput}/>
-      <TracksList songTracks={songTracks} searchMusic={searchMusic}/>
+      <TracksList songTracks={songTracks} searchMusic={searchMusic} onDeleteTrack={deleteTrack}/>
     </div>
   )
 }

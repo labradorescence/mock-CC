@@ -1,10 +1,10 @@
 import React from 'react'
 import Track from './Track'
 
-function TracksList({ songTracks, searchMusic }) {
+function TracksList({ songTracks, searchMusic, onDeleteTrack }) {
 
   const filteredMusic = songTracks.filter((music) => {
-    return music.title.toLowerCase().includes(searchMusic.toLowerCase())
+    return music.title.toLowerCase().includes(searchMusic.toLowerCase()) || music.artist.toLowerCase().includes(searchMusic.toLowerCase())
   } )
   
   return (
@@ -26,7 +26,7 @@ function TracksList({ songTracks, searchMusic }) {
           </th>
         </tr>
         {filteredMusic.map(song => {
-          return <Track song={song} key={song.id}/>
+          return <Track song={song} key={song.id} onDeleteTrack={onDeleteTrack}/>
         })}
       </tbody>
     </table>
